@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.less']
 })
 export class HomeComponent implements OnInit {
+  public userDetails: any;
+  constructor(private router: Router) { }
 
-  constructor() { }
+  ngOnInit(): void {
+    const storage = localStorage.getItem('google_auth');
+    if (storage) {
+      this.userDetails = JSON.parse(storage);
+    } else {
+      this.signOut();
+    }
+  }
 
-  ngOnInit() {
+  signOut(): void {
+    localStorage.removeItem('google_auth');
+    this.router.navigateByUrl('/login').then();
   }
 
 }

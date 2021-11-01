@@ -5,10 +5,10 @@ import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.less']
 })
 export class LoginComponent implements OnInit {
-
+  facebook: any;
   loginForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private router: Router, private authService: SocialAuthService) {
@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
   signInHandler(): void {

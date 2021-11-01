@@ -11,12 +11,12 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    const storage = localStorage.getItem('google_auth');
-    if (storage) {
-      this.userDetails = JSON.parse(storage);
-    } else {
-      this.signOut();
-    }
+    // const storage = localStorage.getItem('google_auth');
+    // if (storage) {
+    //   this.userDetails = JSON.parse(storage);
+    // } else {
+    //   this.signOut();
+    // }
   }
 
   signOut(): void {

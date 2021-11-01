@@ -1,0 +1,28 @@
+<div class="logo-block">
+  <div class="logo-text">
+    <h1>Bonobo</h1>
+    <h6>lorem ipseum description of app here</h6>
+  </div>
+</div>
+
+<div class="container">
+<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" > -->
+<div class="form-group">
+<label for="email"> Email address </label>
+<input type="email" class="form-control" formControlName="email" placeholder="Enter email">
+<small class="form-text text-muted" *ngIf="loginForm.controls.email.touched && loginForm.controls.email.errors?.required"> Please enter email address!</small>
+</div>
+
+<div class="form-group">
+  <label for="password">Password</label>
+  <input type="password" placeholder="Enter password" class="form-control" formControlName="password">
+</div>
+<button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">Continue</button>
+<p class="horizontal-line-text">
+  <span>or</span>
+</p>
+<button class="btn btn-block google-sign-in" (click)="signInHandler()">
+  <i class="fa fa-google"></i>
+  Log in with Google</button>
+<!-- </form> -->
+</div>

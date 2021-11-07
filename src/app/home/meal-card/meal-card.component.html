@@ -1,9 +1,9 @@
-<div *ngFor="let cardDetails of cardDetails" class="card">
-  <div  class="card-body">
+<div *ngFor="let card of cardDetails" class="card">
+  <div class="card-body">
     <div class="row">
       <div class="col">
         <div class="card-block">
-          <p class="food-category">{{cardDetails.category}}</p>
+          <p class="food-category">{{card.category}}</p>
           <div class="row">
             <div class="col-8">
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus augue.</p>
@@ -12,17 +12,17 @@
               <img src="//placehold.it/80" class="img-fluid" alt="">
             </div>
           </div>
-          <a (click)="toggleCard()">
+          <a (click)="toggleCard(card)">
             <p>Order now<i class="fa fa-chevron-down"></i></p>
           </a>
-          <div *ngIf="isCollapsed" class="row">
+          <div *ngIf="(isCollapsed && card === selectedCard)" class="row">
             <div class="col-5">
               <p><i class="fa fa-user"></i>People</p>
               <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group" role="group" aria-label="First group">
-                  <button type="button" class="btn btn-group-select">1</button>
-                  <button type="button" class="btn btn-group-select">2</button>
-                  <button type="button" class="btn btn-group-select">3</button>
+                  <button (click)="peopleSelected(2)" type="button" class="btn btn-group-select">2</button>
+                  <button (click)="peopleSelected(4)" type="button" class="btn btn-group-select">4</button>
+                  <button (click)="peopleSelected(6)" type="button" class="btn btn-group-select">6</button>
                 </div>
               </div>
             </div>
@@ -30,9 +30,8 @@
               <p><i class="fa fa-calendar"></i>Nights</p>
               <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group" role="group" aria-label="First group">
-                  <button type="button" class="btn btn-group-select">1</button>
-                  <button type="button" class="btn btn-group-select">2</button>
-                  <button type="button" class="btn btn-group-select">3</button>
+                  <button (click)="nightsSelected(3)" type="button" class="btn btn-group-select">3</button>
+                  <button (click)="nightsSelected(5)" type="button" class="btn btn-group-select">5</button>
                 </div>
               </div>
             </div>
@@ -42,7 +41,6 @@
           </a>
         </div>
       </div>
-
     </div>
   </div>
 </div>

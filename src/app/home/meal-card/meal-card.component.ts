@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MealCardComponent implements OnInit {
   cardDetails: any;
+  selectedCard: any;
   public isCollapsed: boolean;
   constructor() {
     this.isCollapsed = false;
@@ -29,7 +30,17 @@ export class MealCardComponent implements OnInit {
     ]
   }
 
-  toggleCard(): void {
+  toggleCard(card: any): void {
+    this.selectedCard = card;
     this.isCollapsed = !this.isCollapsed;
   }
+
+  peopleSelected(people: number): void {
+    console.log(people)
+  }
+
+  nightsSelected(nights: number): void {
+    console.log(nights)
+  }
 }
+

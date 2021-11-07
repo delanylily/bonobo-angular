@@ -1,22 +1,28 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeModule } from './home/home.module';
+import { CustomCardComponent } from './custom-plan/custom-card/custom-card.component';
+import { CustomPlanComponent } from './custom-plan/custom-plan.component';
+import { MealCardComponent } from './home/meal-card/meal-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    routingComponents,
+    MealCardComponent,
+    CustomCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     SocialLoginModule,
-    HomeModule
+    NgbCarouselModule,
   ],
   providers: [
     {

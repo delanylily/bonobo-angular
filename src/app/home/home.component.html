@@ -1,8 +1,56 @@
 <div class="container">
   <h1>Bonobo</h1>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <div class="card-block">
+            <p class="food-category">Vegetarian</p>
+            <div class="row">
+              <div class="col-8">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus augue.</p>
+              </div>
+              <div class="col-4">
+                <img src="//placehold.it/80" class="img-fluid" alt="">
+              </div>
+            </div>
+            <a (click)="toggleCard()">
+              <p>Order now<i class="fa fa-chevron-down"></i></p>
+            </a>
+            <div class="row">
+              <div class="col-6">
+                <p><i class="fa fa-user"></i>People</p>
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                  <div class="btn-group" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-group-select">1</button>
+                    <button type="button" class="btn btn-group-select">2</button>
+                    <button type="button" class="btn btn-group-select">3</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <p><i class="fa fa-calendar"></i>Nights</p>
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                  <div class="btn-group" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-group-select">1</button>
+                    <button type="button" class="btn btn-group-select">2</button>
+                    <button type="button" class="btn btn-group-select">3</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="">
+              <p class="see-menu">See menu</p>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
 
 
-<span class="font-weight-bold">Name: </span>{{userDetails?.name}}
+<!-- <span class="font-weight-bold">Name: </span>{{userDetails?.name}}
 <span class="font-weight-bold">Name: </span>{{userDetails?.email}}
-<button class="btn btn-block btn-danger mt-4" (click)="signOut()">Sign out</button>
+<button class="btn btn-block btn-danger mt-4" (click)="signOut()">Sign out</button> -->

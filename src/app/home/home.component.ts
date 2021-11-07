@@ -8,15 +8,13 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   public userDetails: any;
   public isCollapsed: boolean;
+  cardDetails: any;
   constructor(private router: Router) {
     this.isCollapsed = false;
   }
 
   ngOnInit(): void {
-  }
 
-  toggleCard(): void {
-    this.isCollapsed = !this.isCollapsed;
   }
 
   signOut(): void {
